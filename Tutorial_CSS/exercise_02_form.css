@@ -1,0 +1,37 @@
+body {
+  font-family: Arial;
+}
+
+h1 {
+  border: 5px solid #00008b;
+  padding: 25px;
+  margin: 25px;
+  text-align: center;
+}
+
+td {
+  border: 2px solid #00008b;
+  padding: 2px;
+}
+
+select {
+  width: 100%;
+}
+
+#dob {
+  font-family: monospace;
+  width: 95.5%;
+}
+
+.formheading {
+  padding-right: 50px;
+}
+
+#submit {
+  background: #00008b;
+  color: #ffffff;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
