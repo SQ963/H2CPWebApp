@@ -1,0 +1,23 @@
+body {
+  background-color: #0b0c10;
+}
+
+h1,
+h2,
+a {
+  color: #efe2ba;
+  font-family: "Courier New";
+}
+
+p,
+li {
+  color: #2cd0d5;
+  font-family: "Courier New";
+}
+
+h1 {
+  text-align: center;
+  background: #fc4445;
+  border: 5px solid #efe2ba;
+  padding: 10px;
+}
