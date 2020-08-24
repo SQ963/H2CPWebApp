@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rank Point Calculator</title>
+		<link rel="stylesheet" href="/static/css/style_sheet.css" />
+	</head>
+	<body>
+		{% extends "base.html" %} {% block content %}
+		<h1>Rank Point Calculator</h1>
+		<form action="{{ url_for('rp_calc') }}" method="POST">
+			<p>Do you wish to include result of PW?</p>
+			<select name="pw">
+				<option value="Yes">Yes</option>
+				<option value="No">No</option>
+			</select>
+			<p>Do you wish to include result of Mother Tongue Language?</p>
+			<select name="mt">
+				<option value="Yes">Yes</option>
+				<option value="No">No</option>
+			</select>
+			<br />
+			<br />
+			<input type="submit" value="Update" />
+		</form>
+		{% endblock %}
+	</body>
+</html>
