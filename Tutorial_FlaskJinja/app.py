@@ -48,14 +48,22 @@ def rp_display():
     
     # adding total
     if len(subjects) > 5:
-        final_rp.append("{:.2f}".format(90.00))
         if len(subjects) == 7:
-            # if there are 7 subjects (aka mother tongue is included)
+        # if there are 7 subjects (aka mother tongue is included)
             rp_without_mt = sum(rp_calc[:6])
             rp_with_mt = sum(rp_calc) * 0.9
+            final_rp.append("{:.2f}".format(90.00))
             final_rp.append("{:.2f}".format(max([rp_without_mt, rp_with_mt])))
-        else:
-            final_rp.append("{:.2f}".format(sum(rp_calc)))
+
+        elif len(subjects) == 6:
+            if subjects[5] == "Mother Tongue":
+                rp_without_mt = sum(rp_calc[:5])
+                rp_with_mt = sum(rp_calc) / 90 * 80
+                final_rp.append("{:.2f}".format(80.00))
+                final_rp.append("{:.2f}".format(max([rp_without_mt, rp_with_mt])))
+            else:
+                final_rp.append("{:.2f}".format(90.00))
+                final_rp.append("{:.2f}".format(sum(rp_calc)))
     else:
         final_rp.append("{:.2f}".format(80.00))
         final_rp.append("{:.2f}".format(sum(rp_calc)))
